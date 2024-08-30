@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/hb1/hb1/html.creativegigstf.com/jobi/jobi/main_logo.png" type="image/png"> <!-- Add this line to include a favicon -->
+
+    <title>Profile Title Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        @keyframes slideFadeIn {
+            from {
+                transform: translateX(50%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideFadeIn 1s ease-out;
+        }
+
+        .progress {
+            font-size: 16px;
+            color: #666;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .title-input-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .title-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .clear-button {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            color: #888;
+            font-size: 18px;
+        }
+
+        .next-button {
+            background-color: #14a800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background-color: #12a000;
+        }
+
+        .back-button {
+            background-color: #ddd;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">3/6</div>
+        <h1>Got it. Now, add a title to tell the world what you do.</h1>
+        <p>It's the very first thing clients see, so make it count. Stand out by describing your expertise in your own words.</p>
+        
+        <div class="title-input-container">
+            <input type="text" class="title-input" placeholder="AI & Machine Learning | Front-End Development, Product Development, R" />
+            <span class="clear-button" onclick="clearInput()">&#10006;</span>
+        </div>
+        
+        <button class="back-button" onclick="navigateToPrevPage()">Back</button>
+        <button class="next-button" onclick="navigateToNextPage()">Next, add your experience</button>
+    </div>
+
+    <script>
+        function navigateToNextPage() {
+            // Save the selected categories (optional)
+            // Navigate to the next page
+            window.location.href = '4.html';
+        }
+        function navigateToPrevPage() {
+            window.location.href = '2.html';
+        }
+        function clearInput() {
+            document.querySelector('.title-input').value = '';
+        }
+    </script>
+</body>
+</html>

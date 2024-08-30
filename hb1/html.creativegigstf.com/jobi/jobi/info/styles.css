@@ -1,0 +1,178 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color for contrast */
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    background-color: #0077b6; /* Blue header color */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px; /* Increased width */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px; /* Reduced font size */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+    outline: none;
+}
+
+.input-small {
+    max-width: 300px; /* Minimized width */
+}
+
+.profile-pic-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Existing CSS styles remain unchanged */
+
+/* New styles for the customized upload button */
+.upload-button {
+    background-color: #0077b6; /* Blue background */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: 'Poppins', Arial, sans-serif;
+    width: max-content; /* Ensure button width adjusts to content */
+}
+
+.upload-button::before {
+    content: '📤'; /* Upload icon */
+    font-size: 20px; /* Adjust icon size */
+}
+
+.upload-button span {
+    display: inline-block;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Space between fields */
+}
+
+.input-small {
+    max-width: 300px; /* Minimized width */
+}
+
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.back-button,
+.submit-button {
+    background-color: #0077b6; /* Blue background */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.submit-button {
+    background-color: #0077b6; /* Blue background */
+}
+
+.back-button {
+    background-color: #005b96;
+}
+
+.submit-button:hover,
+.back-button:hover {
+    background-color: #005b96;
+}
+
+.submit-button:active,
+.back-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .back-button,
+    .submit-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

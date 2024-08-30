@@ -93,9 +93,9 @@
 						<!-- logo -->
 						<div class="right-widget ms-auto ms-lg-0 order-lg-2">
 							<ul class="d-flex align-items-center style-none">
-								<li><a href="#" class="fw-500 login-btn-three tran3s" data-bs-toggle="modal" data-bs-target="#loginModal" id="maha"
-								>Login/Sign up</a></li>
-								<li class="d-none d-md-block ms-3" ><a href="dashboard/employer-dashboard-submit-job.html" class="btn-five" >Post a job</a></li>
+								<li><a href="pricing.html" class="fw-500 login-btn-three tran3s"
+								>Upgrade Profile</a></li>
+								<li class="d-none d-md-block ms-3" ><a href="dashboard/employer-dashboard-submit-job.html" class="btn-five" >Post Jobs</a></li>
 							</ul>
 						</div> <!--/.right-widget-->
 
@@ -107,17 +107,19 @@
 							</button>
 							<div class="collapse navbar-collapse" id="navbarNav">
 								<ul class="navbar-nav">
-									<li class="d-block d-lg-none"><div class="logo"><a href="index.html" class="d-block"><img src="images/logo/logo_06.png" alt="" width="100"></a></div></li>
+									<li class="d-block d-lg-none"><div class="logo"><a href="freelance_home.html" class="d-block"><img src="images/logo/logo_06.png" alt="" width="100"></a></div></li>
 									
+                  <li class="nav-item">
+                    <a class="nav-link" href="dashboard/candidate-dashboard-index.html" role="button">Dashboard</a>
+                  </li>
 									<li class="nav-item">
-										<a class="nav-link" href="index-6.html " role="button">Home</a>
+                   
+										<a class="nav-link" href="freelance_home.html" role="button">Home</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="job-grid-v1.html" role="button">Jobs</a>
+										<a class="nav-link" href="recruit_search.html" role="button">Freelancers</a>
 									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="candidates-v1.html" role="button">Freelancers</a>
-									</li>
+									
 									<li class="nav-item">
 										<a class="nav-link" href="contact.html" role="button">Contact</a>
 									</li>
@@ -163,40 +165,90 @@
 						<div class="row">
 							<div class="col-xl-8 col-lg-9 m-auto">
 								<div class="job-search-one style-two position-relative me-xxl-3 ms-xxl-3 mb-100 lg-mb-50">
-									<form action="#">
-										<div class="row">
-											<div class="col-md-5">
-												<div class="input-box">
-													<div class="label">Your job title, keyword or company?</div>
-													<input type="text" placeholder="Google" class="keyword">
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="input-box border-left">
-													<div class="label">Category</div>
-													<select class="nice-select lg">
-														<option value="1">Web Design</option>
-														<option value="2">Design & Creative</option>
-														<option value="3">It & Development</option>
-														<option value="4">Web & Mobile Dev</option>
-														<option value="5">Writing</option>
-														<option value="6">Sales & Marketing</option>
-														<option value="7">Music & Audio</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<button class="fw-500 text-md h-100 w-100 tran3s search-btn-two" style="background-color: #0077b6ff; transition: background-color 0.3s;"
-        onmouseover="this.style.backgroundColor='#00BF58';" onmouseout="this.style.backgroundColor='#0077b6ff';">
-    SEARCH
-</button>
-
-												 
-												
-											</div>
-										</div>
-									</form>
+				
+							
+									<a href="recruit_search.html"><button class="learn-more"> Click to find Freelancers
+									</button>
+								</a>
 								</div>
+								
+								<style>
+								/* From Uiverse.io by adamgiebl */ 
+/* From Uiverse.io by Madflows */ 
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ font-family: inherit;
+ font-size: 15px;
+ margin-left: 35vh;
+}
+
+button.learn-more {
+ font-weight: 600;
+ color: #382b22;
+ text-transform: uppercase;
+ padding: 1.25em 2em;
+ background: #fff0f0;
+ border: 2px solid #b18597;
+ border-radius: 0.75em;
+ -webkit-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+ -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: #f9c4d2;
+ border-radius: inherit;
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.75em, -1em);
+ transform: translate3d(0, 0.75em, -1em);
+ transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+ background: #ffe9e9;
+ -webkit-transform: translate(0, 0.25em);
+ transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0.5em, -1em);
+ transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+ background: #ffe9e9;
+ -webkit-transform: translate(0em, 0.75em);
+ transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+ -webkit-box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+ -webkit-transform: translate3d(0, 0, -1em);
+ transform: translate3d(0, 0, -1em);
+}	
+								
+																</style>
+
+
 								<!-- /.job-search-one -->
                                 
 							</div>
@@ -303,48 +355,48 @@
 					</div>
 					<div class="col-lg-4">
 						<div class="d-flex justify-content-lg-end">
-							<a href="job-grid-v1.html" class="btn-six dark d-none d-lg-inline-block">Explore all fields</a>
+							<a href="job_freelance.html" class="btn-six dark d-none d-lg-inline-block">Explore all fields</a>
 						</div>
 					</div>
 				</div>
 				<div class="card-wrapper d-flex flex-wrap justify-content-center justify-content-lg-between pt-50 lg-pt-30">
 					<div class="card-style-seven text-center mt-15 wow fadeInUp" style="--clr:#1e9bff">
-						<a href="job-grid-v1.html" class="wrapper d-flex align-items-center" style="background: #EAFBFD;" >
+						<a href="job_freelance.html" class="wrapper d-flex align-items-center" style="background: #EAFBFD;" >
 							<div class="icon d-flex align-items-center justify-content-center"><img src="uiux.gif" style="height: 70px;"></div>
 							<div class="title fw-500" >UI/UXDesign</div>
 						</a>
 					</div>
 					<!-- /.card-style-seven -->
 					<div class="card-style-seven text-center mt-15 wow fadeInUp" data-wow-delay="0.1s">
-						<a href="job-grid-v1.html" class="wrapper d-flex align-items-center" style="background: #FFFAEC;">
+						<a href="job_freelance.html" class="wrapper d-flex align-items-center" style="background: #FFFAEC;">
 							<div class="icon d-flex align-items-center justify-content-center"><img src="py.gif" style="height: 70px;"></div>
 							<div class="title fw-500">PYTHON</div>
 						</a>
 					</div>
 					<!-- /.card-style-seven -->
 					<div class="card-style-seven text-center mt-15 wow fadeInUp" data-wow-delay="0.15s">
-						<a href="job-grid-v1.html" class="wrapper d-flex align-items-center" style="background: #FFEBFB;">
+						<a href="job_freelance.html" class="wrapper d-flex align-items-center" style="background: #FFEBFB;">
 							<div class="icon d-flex align-items-center justify-content-center"><img src="html.gif" style="height: 70px;" ></div>
 							<div class="title fw-500">HTML/CSS</div>
 						</a>
 					</div>
 					<!-- /.card-style-seven -->
 					<div class="card-style-seven text-center mt-15 wow fadeInUp" data-wow-delay="0.16s">
-						<a href="job-grid-v1.html" class="wrapper d-flex align-items-center" style="background: #E8F7E9;">
+						<a href="job_freelance.html" class="wrapper d-flex align-items-center" style="background: #E8F7E9;">
 							<div class="icon d-flex align-items-center justify-content-center"><img src="aiml.gif" style="height: 70px;"></div>
 							<div class="title fw-500">AI</div>
 						</a>
 					</div>
 					<!-- /.card-style-seven -->
 					<div class="card-style-seven text-center mt-15 wow fadeInUp" data-wow-delay="0.17s">
-						<a href="job-grid-v1.html" class="wrapper d-flex align-items-center" style="background: #F7F5FF;">
+						<a href="job_freelance.html" class="wrapper d-flex align-items-center" style="background: #F7F5FF;">
 							<div class="icon d-flex align-items-center justify-content-center"><img src="stack.gif" style="height: 70px;"></div>
 							<div class="title fw-500">FULL STACK</div>
 						</a>
 					</div>
 					<!-- /.card-style-seven -->
 					<div class="card-style-seven text-center mt-15 wow fadeInUp" data-wow-delay="0.18s">
-						<a href="job-grid-v1.html" class="wrapper d-flex align-items-center" style="background: #FFF3EA;">
+						<a href="job_freelance.html" class="wrapper d-flex align-items-center" style="background: #FFF3EA;">
 							<div class="icon d-flex align-items-center justify-content-center"><img src="editing.gif" style="height: 70px;"></div>
 							<div class="title fw-500">Editing</div>
 						</a>
@@ -353,7 +405,7 @@
 				</div>
 				<!-- /.card-wrapper -->
 				<div class="text-center mt-40 d-lg-none">
-					<a href="job-grid-v1.html" class="btn-six dark">Explore all fields</a>
+					<a href="job_freelance.html" class="btn-six dark">Explore all fields</a>
 				</div>
 			</div>
 		</section>
@@ -375,7 +427,7 @@
 					<div class="card-wrapper category-slider-one row">
 						<div class="item">
 							<div class="card-style-six position-relative" style="background-image: url(images/assets/img_16.jpg);">
-								<a href="job-grid-v1.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
+								<a href="job_freelance.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
 									<div class="title text-white fw-500 text-lg">WordPress <br>Development.</div>
 								</a>
 							</div>
@@ -383,7 +435,7 @@
 						</div>
 						<div class="item">
 							<div class="card-style-six position-relative" style="background-image: url(images/assets/img_17.jpg);">
-								<a href="job-grid-v1.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
+								<a href="job_freelance.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
 									<div class="title text-white fw-500 text-lg">Audio & <br> Video Editing.</div>
 								</a>
 							</div>
@@ -391,7 +443,7 @@
 						</div>
 						<div class="item">
 							<div class="card-style-six position-relative" style="background-image: url(images/assets/img_18.jpg);">
-								<a href="job-grid-v1.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
+								<a href="job_freelance.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
 									<div class="title text-white fw-500 text-lg">Product & <br> Branding Design</div>
 								</a>
 							</div>
@@ -399,7 +451,7 @@
 						</div>
 						<div class="item">
 							<div class="card-style-six position-relative" style="background-image: url(images/assets/img_19.jpg);">
-								<a href="job-grid-v1.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
+								<a href="job_freelance.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
 									<div class="title text-white fw-500 text-lg">Admin & <br> Customer Support</div>
 								</a>
 							</div>
@@ -407,7 +459,7 @@
 						</div>
 						<div class="item">
 							<div class="card-style-six position-relative" style="background-image: url(images/assets/img_18.jpg);">
-								<a href="job-grid-v1.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
+								<a href="job_freelance.html" class="w-100 h-100 ps-4 pb-20 d-flex align-items-end">
 									<div class="title text-white fw-500 text-lg">Product & <br> Branding Design</div>
 								</a>
 							</div>
@@ -447,7 +499,7 @@
 					</div>
 					<div class="col-lg-5">
 						<div class="d-flex justify-content-lg-end">
-							<a href="job-grid-v1.html" class="btn-six d-none d-lg-inline-block">Explore all recent Projects</a>
+							<a href="job_freelance.html" class="btn-six d-none d-lg-inline-block">Explore all recent Projects</a>
 						</div>
 					</div>
 				</div>
@@ -476,8 +528,8 @@
 							</div>
 							<div class="col-lg-2 col-md-4">
 								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="signup.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="signup.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
+									<a href="dashboard/candidate-dashboard-saved-jobs.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+									<a href="job-details-v2.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
 								</div>
 							</div>
                         </div>
@@ -506,8 +558,8 @@
 							</div>
 							<div class="col-lg-2 col-md-4">
 								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="signup.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="signup.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
+									<a href="dashboard/candidate-dashboard-saved-jobs.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+									<a href="job-details-v2.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
 								</div>
 							</div>
                         </div>
@@ -536,8 +588,8 @@
 							</div>
 							<div class="col-lg-2 col-md-4">
 								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="signup.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="signup.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
+									<a href="dashboard/candidate-dashboard-saved-jobs.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+									<a href="job-details-v2.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
 								</div>
 							</div>
                         </div>
@@ -566,8 +618,8 @@
 							</div>
 							<div class="col-lg-2 col-md-4">
 								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="signup.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="signup.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
+									<a href="dashboard/candidate-dashboard-saved-jobs.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+									<a href="job-details-v2.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
 								</div>
 							</div>
                         </div>
@@ -601,8 +653,8 @@
 							</div>
 							<div class="col-lg-2 col-md-4">
 								<div class="btn-group d-flex align-items-center justify-content-md-end sm-mt-20">
-									<a href="signup.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
-									<a href="signup.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
+									<a href="dashboard/candidate-dashboard-saved-jobs.html" class="save-btn text-center rounded-circle tran3s me-3" title="Save Job"><i class="bi bi-bookmark-dash"></i></a>
+									<a href="job-details-v2.html" class="apply-btn text-center tran3s" style="background-color: #0077b6ff;">APPLY</a>
 								</div>
 							</div>
                         </div>
@@ -1080,20 +1132,20 @@
 								<span class="pe-3 ps-3">OR</span>
 								<div class="line"></div>
 							</div>
-							<div class="row">
+							<div class="row" id="googling">
 								<div class="col-md-6">
 									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
 										<img src="images/icon/google.png" alt="">
 										<span class="ps-2">Login with Google</span>
 									</a>
 								</div>
-								<div class="col-md-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
-										<img src="images/icon/facebook.png" alt="">
-										<span class="ps-2">Login with Facebook</span>
-									</a>
-								</div>
-							</div>
+
+								<style>
+									#googling{
+										display: flex;
+										justify-content: center;
+									}
+								</style>
 							<p class="text-center mt-10">Don't have an account? <a href="signup.html" class="fw-500">Sign up</a></p>
 						</div>
 						<!-- /.form-wrapper -->

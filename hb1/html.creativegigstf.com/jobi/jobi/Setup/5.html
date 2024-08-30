@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/hb1/hb1/html.creativegigstf.com/jobi/jobi/main_logo.png" type="image/png"> <!-- Add this line to include a favicon -->
+
+    <title>Set Your Hourly Rate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes slideFadeIn {
+            from {
+                transform: translateX(50%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideFadeIn 1s ease-out;
+        }
+
+        .progress {
+            font-size: 16px;
+            color: #666;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .rate-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .rate-section h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .rate-section p {
+            margin: 0;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .rate-input {
+            display: flex;
+            align-items: center;
+        }
+
+        .rate-input input {
+            width: 100px;
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: right;
+        }
+
+        .rate-input span {
+            color: #666;
+        }
+
+        .next-button {
+            background-color: #14a800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background-color: #12a000;
+        }
+
+        .back-button {
+            background-color: #ddd;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #ccc;
+        }
+
+        .link {
+            color: #14a800;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">5/6</div>
+        <h1>Now, let’s set your hourly rate.</h1>
+        <p>Clients will see this rate on your profile and in search results once you publish your profile. You can adjust your rate every time you submit a proposal.</p>
+
+        <div class="rate-section">
+            <div>
+                <h3>Hourly rate</h3>
+                <p>Total amount the client will see.</p>
+            </div>
+            <div class="rate-input">
+                <span>₹</span>
+                <input type="number" id="hourly-rate" value="0" oninput="calculateRates()">
+                <span>/hr</span>
+            </div>
+        </div>
+
+        <div class="rate-section">
+            <div>
+                <h3>Service fee <a href="#" class="link">Learn more</a></h3>
+                <p>This helps us run the platform and provide services like payment protection and customer support.</p>
+            </div>
+            <div class="rate-input">
+                <span>₹</span>
+                <input type="text" id="service-fee" value="0" disabled>
+                <span>/hr</span>
+            </div>
+        </div>
+
+        <div class="rate-section">
+            <div>
+                <h3>You’ll get</h3>
+                <p>The estimated amount you’ll receive after service fees.</p>
+            </div>
+            <div class="rate-input">
+                <span>₹</span>
+                <input type="text" id="you-get" value="0" disabled>
+                <span>/hr</span>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button class="back-button" onclick="navigateToPrevPage()">Back</button>
+            <button class="next-button" onclick="navigateToNextPage()">Next, add your photo and location</button>
+        </div>
+    </div>
+
+    <script>
+         function navigateToNextPage() {
+            // Save the selected categories (optional)
+            // Navigate to the next page
+            window.location.href = '6.html';
+        }
+        function navigateToPrevPage() {
+            window.location.href = '4.html';
+        }
+        function calculateRates() {
+            const hourlyRate = parseFloat(document.getElementById('hourly-rate').value) || 0;
+            const serviceFee = hourlyRate * 0.2; // assuming a 20% service fee
+            const youGet = hourlyRate - serviceFee;
+
+            document.getElementById('service-fee').value = serviceFee.toFixed(2);
+            document.getElementById('you-get').value = youGet.toFixed(2);
+        }
+
+        // Initialize the calculation
+        calculateRates();
+    </script>
+</body>
+</html>

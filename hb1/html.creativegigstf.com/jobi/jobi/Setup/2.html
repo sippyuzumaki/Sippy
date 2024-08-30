@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/hb1/hb1/html.creativegigstf.com/jobi/jobi/main_logo.png" type="image/png"> <!-- Add this line to include a favicon -->
+
+    <title>Skills Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        @keyframes slideFadeIn {
+            from {
+                transform: translateX(50%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideFadeIn 1s ease-out;
+        }
+
+        .progress {
+            font-size: 16px;
+            color: #666;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .skills-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .suggested-skills {
+            margin-bottom: 20px;
+        }
+
+        .skill {
+            display: inline-block;
+            background-color: #f1f1f1;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .tip-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #14a800;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .tip-box p {
+            margin: 0;
+        }
+
+        .next-button {
+            background-color: #14a800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .next-button:hover {
+            background-color: #12a000;
+        }
+
+        .back-button {
+            background-color: #ddd;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">2/6</div>
+        <h1>Nearly there! What work are you here to do?</h1>
+        <p>Your skills show clients what you can offer, and help us choose which jobs to recommend to you. Add or remove the ones we've suggested, or start typing to pick more. It's up to you.</p>
+        
+        <input type="text" class="skills-input" placeholder="Enter skills here" maxlength="100" />
+        
+        <div class="suggested-skills">
+            <span class="skill">International Development</span>
+            <span class="skill">Product Development</span>
+            <span class="skill">Web Application</span>
+            <span class="skill">Web Development</span>
+        </div>
+        
+        <div class="tip-box">
+            <p>“Sippy’s algorithm will recommend specific job posts to you based on your skills. So choose them carefully to get the best match!”</p>
+            <p><strong>Sippy Pro Tip</strong></p>
+        </div>
+        
+        <button class="back-button" onclick="navigateToPrevPage()">Back</button>
+        <button class="next-button" onclick="navigateToNextPage()">Next, your profile title</button>
+    </div>
+
+    <script>
+        function navigateToNextPage() {
+            // Save the selected categories (optional)
+            // Navigate to the next page
+            window.location.href = '3.html';
+        }
+        function navigateToPrevPage() {
+            window.location.href = '1.html';
+        }
+        document.querySelectorAll('.skill').forEach(skill => {
+            skill.addEventListener('click', () => {
+                skill.classList.toggle('selected');
+                skill.style.backgroundColor = skill.classList.contains('selected') ? '#cce5ff' : '#f1f1f1';
+            });
+        });
+
+        document.querySelector('.skills-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && this.value.trim() !== '') {
+                const newSkill = document.createElement('span');
+                newSkill.classList.add('skill');
+                newSkill.textContent = this.value.trim();
+                newSkill.style.backgroundColor = '#cce5ff';
+                newSkill.addEventListener('click', () => {
+                    newSkill.remove();
+                });
+                document.querySelector('.suggested-skills').appendChild(newSkill);
+                this.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

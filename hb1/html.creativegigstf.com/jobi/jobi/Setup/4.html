@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/hb1/hb1/html.creativegigstf.com/jobi/jobi/main_logo.png" type="image/png"> <!-- Add this line to include a favicon -->
+
+    <title>Write Your Bio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes slideFadeIn {
+            from {
+                transform: translateX(50%) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideFadeIn 1s ease-out;
+        }
+
+        .progress {
+            font-size: 16px;
+            color: #666;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .bio-textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        .char-count {
+            text-align: right;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .next-button {
+            background-color: #14a800;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .next-button:hover {
+            background-color: #12a000;
+        }
+
+        .back-button {
+            background-color: #ddd;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">4/6</div>
+        <h1>Great. Now write a bio to tell the world about yourself.</h1>
+        <p>Help people get to know you at a glance. What work do you do best? Tell them clearly, using paragraphs or bullet points. You can always edit later; just make sure you proofread now.</p>
+        
+        <textarea class="bio-textarea" placeholder="Passionate about turning ideas into reality, I specialize in Web UI design and front-end development, where I bring creativity and technical expertise together to build engaging user experiences. My approach to work is collaborative—I thrive in team settings where ideas can be shared and developed collectively. I've had the opportunity to lead teams and projects, which has sharpened my leadership skills and ability to deliver successful outcomes." oninput="updateCharCount()"></textarea>
+        
+        <div class="char-count">4121 characters left</div>
+
+        <div style="margin-top: 20px; display: flex; justify-content: space-between;">
+            <button class="back-button" onclick="navigateToPrevPage()">Back</button>
+            <button class="next-button" onclick="navigateToNextPage()">Next, set your rate</button>
+        </div>
+    </div>
+
+    <script>
+         function navigateToNextPage() {
+            // Save the selected categories (optional)
+            // Navigate to the next page
+            window.location.href = '5.html';
+        }
+        function navigateToPrevPage() {
+            window.location.href = '3.html';
+        }
+        function updateCharCount() {
+            const textarea = document.querySelector('.bio-textarea');
+            const charCount = 5000 - textarea.value.length; // assuming max characters is 5000
+            document.querySelector('.char-count').textContent = charCount + ' characters left';
+        }
+    </script>
+</body>
+</html>

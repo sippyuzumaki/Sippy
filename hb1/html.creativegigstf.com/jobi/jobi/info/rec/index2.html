@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Selection</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <header>
+        <div class="logo">upwork</div>
+        <div class="user-icon" aria-label="User Icon">P</div>
+    </header>
+
+    <div class="container">
+        <section class="job-post-form">
+            <h1>What are the main skills required for your work?</h1>
+            <form id="skills-form">
+                <label for="skills-search">Search skills or add your own</label>
+                <input type="text" id="skills-search" placeholder="e.g., Front-End Development" aria-label="Search skills or add your own">
+                <p>For the best results, add 3-5 skills</p>
+
+                <div id="selected-skills" aria-live="polite">
+                    <!-- Dynamically added skills will appear here -->
+                </div>
+
+                <p>Popular skills for Front-End Development</p>
+                <div id="suggested-skills">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">jQuery</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">CSS 3</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Website</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Landing Page</span>
+                    <span class="skill-tag">AngularJS</span>
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <button id="back-button" type="button">Back</button>
+            <button id="next-button" type="button">Next: Scope</button>
+        </footer>
+    </div>
+
+    <script src="script2.js"></script> <!-- Link to the JS file -->
+</body>
+</html>

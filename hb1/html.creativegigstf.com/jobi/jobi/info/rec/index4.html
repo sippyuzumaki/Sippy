@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Form</title>
+    <link rel="stylesheet" href="styles4.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+</head>
+<body>
+    <header>
+        <img src="/rec/main_logo.png" alt="Company Logo" style="width: 100px; height: auto;">
+    </header>
+    <div class="container">
+        <h2>Tell us about your budget.</h2>
+        <p>This will help us match you to talent within your range.</p>
+        
+        <div class="budget-option">
+            <label>
+                <input type="radio" name="budgetType" value="hourly" checked>
+                Hourly rate
+            </label>
+            <label>
+                <input type="radio" name="budgetType" value="fixed">
+                Fixed price
+            </label>
+        </div>
+
+        <div class="range-inputs">
+            <label for="from">From:</label>
+            <input type="number" id="from" name="from" min="0" placeholder="$15.00">
+            <label for="to">To:</label>
+            <input type="number" id="to" name="to" min="0" placeholder="$30.00">
+        </div>
+        
+        <div class="info-text">
+            <p>This is the average rate for similar projects.</p>
+            <p>Professionals tend to charge $15 - $30 /hour (USD) for front-end development projects like yours. Experts may charge higher rates.</p>
+        </div>
+
+        <!-- Canvas for the chart -->
+        <canvas id="rateChart" width="400" height="200"></canvas>
+
+        <button class="next-btn">Next: Description</button>
+        <button type="button" id="back-button">Back</button>
+                
+    </div>
+    <script src="script4.js"></script>
+</body>
+</html>

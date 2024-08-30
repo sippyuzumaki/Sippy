@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Scope Estimation</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Job Scope Estimation</h1>
+    </header>
+    <div class="container">
+        <section class="job-scope-form">
+            <h2>Next, estimate the scope of your work.</h2>
+            <p>Consider the size of your project and the time it will take.</p>
+            
+            <div class="scope-options">
+                <h3>Project Size</h3>
+                <div class="option">
+                    <input type="radio" id="small" name="project-size" value="Small">
+                    <label for="small">Small (e.g., simple tasks, one-off jobs)</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="medium" name="project-size" value="Medium" checked>
+                    <label for="medium">Medium (e.g., well-defined projects like a landing page)</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="large" name="project-size" value="Large">
+                    <label for="large">Large (e.g., complex projects, multiple deliverables)</label>
+                </div>
+            </div>
+            
+            <div class="duration">
+                <h3>Estimated Duration</h3>
+                <div class="option">
+                    <input type="radio" id="duration-short" name="duration" value="1-3 Months" checked>
+                    <label for="duration-short">1 to 3 months</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="duration-medium" name="duration" value="3-6 Months">
+                    <label for="duration-medium">3 to 6 months</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="duration-long" name="duration" value="6+ Months">
+                    <label for="duration-long">6+ months</label>
+                </div>
+            </div>
+
+            <div class="experience-level">
+                <h3>Experience Level</h3>
+                <div class="option">
+                    <input type="radio" id="entry" name="experience" value="Entry">
+                    <label for="entry">Entry (Looking for someone relatively new to this field)</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="intermediate" name="experience" value="Intermediate" checked>
+                    <label for="intermediate">Intermediate (Looking for substantial experience in this field)</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="expert" name="experience" value="Expert">
+                    <label for="expert">Expert (Looking for comprehensive and deep expertise in this field)</label>
+                </div>
+            </div>
+
+            <div class="contract-to-hire">
+                <h3>Is this job a contract-to-hire opportunity?</h3>
+                <div class="option">
+                    <input type="radio" id="contract-yes" name="contract-hire" value="Yes">
+                    <label for="contract-yes">Yes, this could become full time</label>
+                </div>
+                <div class="option">
+                    <input type="radio" id="contract-no" name="contract-hire" value="No" checked>
+                    <label for="contract-no">No, not at this time</label>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <button id="back-button">Back</button>
+            <button id="next-button">Next: Budget</button>
+        </footer>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
